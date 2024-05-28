@@ -1,0 +1,382 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.section1{
+    height: 100vh;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style-type: none;
+}
+
+nav{
+    height: 10vh;
+    /* background-color: antiquewhite; */
+    padding: 0 5vw;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    background-image: url("../images/logo.png");
+    height: 5vh;
+    width: 10vw;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.menu ul{
+    display: flex;
+    gap: 3vw;
+}
+
+nav li a{
+    list-style-type: none;
+    font-size: 1.5vw;
+    color: grey;
+    cursor: pointer;
+    position: relative;
+}
+
+nav li a:after{
+    content: "";
+    position: absolute;
+    background-color: aquamarine;
+    height: 0.5vh;
+    width: 0;
+    left: 0;
+    bottom: -0.4vh;
+    transition: 0.5s ease-in;
+}
+
+li a:hover::after{
+    content: "";
+    background-color: aquamarine;
+    width: 100%;
+}
+
+button{
+    padding: 1vw 0.8vw;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: rgba(176, 218, 244, 0.653);
+    color: rgb(62, 165, 230);
+    font-size: 1vw;
+    font-weight: bolder;
+}
+
+.menu-items{
+    display: none;
+}
+
+.menu-icon{
+    display: none;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: black;
+}
+
+.menu-icon-list{
+    height: 100vh;
+    width: 50%;
+    background-color: black;
+    position: fixed;
+    right: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    display: none;
+}
+
+.menu-icon-list ul{
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    /* border: 2px solid red; */
+}
+
+.menu-icon-list ul li{
+    color: white;
+    font-size: 7vw;
+}
+
+/*            HERO             */
+.hero{
+    padding: 7.5vh 10vw;
+    display: flex;
+}
+
+
+.left{
+    width: 50%;
+}
+
+.image{
+    background-image: url("../images/hero.png");
+    height: 60vh;
+    width: 80%;
+    background-size: 100% 100%;
+    animation: circle 2s ease-in infinite;
+}
+
+@keyframes  circle{
+    0%{
+        transform: translateY(-20px);
+    }
+    25%{
+        transform: translateX(20px);
+    }
+    50%{
+        transform: translateY(20px);
+        transform: scale(1.1);
+    }
+    75%{
+        transform: translateX(-20px);
+    }
+    100%{
+        transform: translateY(-20px);
+    }
+}
+
+.right{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3vh;
+}
+
+.right h1{
+    font-size: 3vw;
+}
+
+.right h1 span{
+    color: #00bbf9;
+}
+
+.about{
+    margin: 2vh 0;
+    font-size: 1.5vw;
+    color: grey;
+    line-height: 4vh;
+}
+
+.right button{
+    width: 20vw;
+    background-color: #00bbf9;
+    
+    font-size: 1.3vw;
+    /* padding: 2vh 2vw; */
+    transition: all 0.5s ease;
+}
+
+.right button a{
+    color: white;
+}
+
+
+/*            HERO             */
+
+/*            FOOTER           */
+
+.top-footer{
+    height: 15vh;
+    background-color: #00bbf9;
+    padding: 0 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.achievements p{
+    font-size: 2.5vw;
+    font-weight: 500;
+}
+
+.x p{
+    font-size: 1.2vw;
+    font-weight: 600;
+}
+
+.number p{
+    font-size: 2vw;
+    font-weight: 800;
+}
+
+/*            FOOTER           */
+
+
+@media screen and (max-width:600px){
+    .section1{
+        /* display: flex;
+        flex-direction: column; */
+        height: auto;
+    }
+
+    .logo{
+        height: 8vh;
+        width: 20vw;
+    }
+
+    .menu ul{
+        display: none;
+    }
+
+    button{
+        padding: 2vw 2vw;
+        font-size: 5vw;
+    }
+
+    .menu-items{
+        display: inline-block;
+    }
+
+    .menu-icon{
+        display: inline-block;
+        font-size: 7vw;
+    }
+
+    .menu-icon:focus+ .menu-icon-list{
+        display: inline-block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+     .hero{
+        padding: 3vh 5vw;
+        /* display: flex; */
+        flex-direction: column;
+        gap: 5vh;
+    }
+
+    .right{
+        width: 100%;
+    }
+
+    .right h1{
+        font-size: 8vw;
+    }
+    
+    .about{
+        margin: 2vh 0;
+        font-size: 5vw;
+    }
+
+    .right button{
+        width: 80vw;
+        font-size: 6vw;
+        padding: 3vh 5vw;
+    }
+
+    .left{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .image{
+        width: 80%;
+        background-position: center;
+
+    }
+
+    /*            FOOTER           */
+
+    .top-footer{
+        display: none;
+    }
+
+    /*            FOOTER           */
+}
+
+@media screen and (min-width:600px) and (max-width:1000px){
+    .logo{
+        height: 8vh;
+        width: 15vw;
+    }
+
+    /* .menu ul{
+        display: none;
+        gap: 3vw;
+    } */
+
+    li{
+        font-size: 2vw;
+    }
+
+    button{
+        font-size: 3vw;
+    }
+
+
+     .hero{
+        padding: 5vh 5vw;
+    }
+
+    .right h1{
+        font-size: 3vw;
+    }
+    
+    .about{
+        font-size: 2.5vw;
+    }
+
+    .right{
+        width: 50%;
+    }
+
+    .right button{
+        font-size: 2vw;
+        padding: 3vh 2vw;
+        width: 30vw;
+    }
+
+    .left{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image{
+        width: 80%;
+        background-position: center;
+    }
+
+    /*            FOOTER           */
+
+    .achievements p{
+        font-size: 2.7vw;
+    }
+
+    .x p{
+        font-size: 1.4vw;
+    }
+
+    .number p{
+        font-size: 2.2vw;
+    }
+
+    /*            FOOTER           */
+    }

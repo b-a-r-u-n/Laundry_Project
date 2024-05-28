@@ -1,0 +1,336 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style-type: none;
+}
+
+.promice-section{
+    height: 40vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5vw;
+}
+
+.promices{
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1vh;
+}
+
+.promice-logo{
+    font-size: 4vw;
+}
+
+.promice-name{
+    font-size: 2vw;
+    font-weight: 600;
+}
+
+.how{
+    text-align: center;
+    font-size: 1.3vw;
+    color: #a9a9a9dd;
+}
+
+.subscribe{
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    gap: 5vw;
+    background-color: #00a6fb;
+    padding: 0 5vw;
+}
+
+.subscribe-left{
+    width: 30%;
+    color: white;
+    font-size: 1.7vw;
+}
+
+.subscribe-right{
+    display: grid;
+    grid-template-columns: 20vw 25vw;
+    row-gap: 2vh;
+    column-gap: 2vw;
+}
+
+.subscribe-right input{
+    height: 7vh;
+    border-radius: 0;
+    background-color: #d6f3f958;
+    box-shadow: inset 1px 1px 10px white
+    ,inset -1px -1px 10px white;
+}
+
+.subscribe-right input[type=text]{
+    width: 20vw;
+}
+
+.subscribe-right input[type=email]{
+    width: 25vw;
+}
+
+.subscribe-right button{
+    background-color: white;
+    border-radius: 0;
+    height: 7vh;
+    font-size: 1.5vw;
+}
+
+
+.more{
+    height: 35vh;
+    padding: 4.5vh 5vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.card{
+    width: 15vw;
+}
+
+.logoandabout{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5vh;
+}
+
+.more-logo{
+    background-image: url("../images/logo.png");
+    height: 5vh;
+    width: 10vw;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    left: -2vw;
+}
+
+.more-heading{
+    margin-bottom: 1.5vh;
+}
+
+.more ul li{
+    font-size: 1.5vw;
+    font-weight: 500;
+    color: grey;
+}
+
+.more a{
+    color: #a9a9a9a8;
+}
+
+.more-heading a{
+    font-size: 1.7vw;
+    font-weight: 600;
+    color: black;
+}
+
+.follow-icon a i{
+    font-size: 2vw;
+    margin-right: 1vw;
+    color: black;
+}
+
+@media screen and (max-width:600px){
+    .promice-section{
+        height: auto;
+        padding: 5vh 5vw;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        justify-items: center;
+        row-gap: 3vh;
+    }
+    
+    .promices{
+        width: 95%;
+    }
+    
+    .promice-logo{
+        font-size: 10vw;
+    }
+    
+    .promice-name{
+        font-size: 4.5vw;
+    }
+    
+    .how{
+        font-size: 5vw;
+    }
+
+    .subscribe{
+        height: auto;
+        flex-direction: column;
+        padding: 5vh 5vw;
+    }
+    
+    .subscribe-left{
+        width: 100%;
+        font-size: 6vw;
+    }
+    
+    .subscribe-right{
+        width: 100%;
+        grid-template-columns: 70vw;
+    }
+    
+    .subscribe-right input{
+        height: 5vh;
+    }
+    
+    .subscribe-right input[type=text]{
+        width: 70vw;
+    }
+    
+    .subscribe-right input[type=email]{
+        width: 70vw;
+    }
+    
+    .subscribe-right button{
+        width: 50%;
+        font-size: 5vw;
+    }
+
+    .more{
+        height: auto;
+        padding: 5vh 7vw;
+        flex-direction: column;
+        gap: 4vh;
+    }
+    
+    .card{
+        width: 80%;
+    }
+    
+    .logoandabout{
+        height: auto;
+    }
+    
+    .more-logo{
+        position: relative;
+        left: -9vw;
+        height: 10vh;
+        width: 50vw;
+    }
+    
+    .more-heading{
+        margin-bottom: 1.5vh;
+    }
+    
+    .more ul li{
+        font-size: 6vw;
+    }
+    
+    .more-heading a{
+        font-size: 8vw;
+    }
+    
+    .follow-icon a i{
+        font-size: 8vw;
+        margin-right: 5vw;
+    }
+}
+
+@media screen and (min-width:600px) and (max-width:1000px){
+    .promice-section{
+        height: auto;
+        align-items: flex-start;
+        padding: 5vh 5vw;
+    }
+    
+    .promice-logo{
+        font-size: 6vw;
+    }
+    
+    .promice-name{
+        font-size: 2.1vw;
+    }
+    
+    .how{
+        font-size: 1.9vw;
+    }
+
+    .subscribe{
+        height: auto;
+        padding: 5vh 5vw;
+    }
+    
+    .subscribe-left{
+        font-size: 2vw;
+    }
+    
+    .subscribe-right{
+        grid-template-columns: 30vw 35vw;
+    }
+
+    .subscribe-right input[type=text]{
+        width: 30vw;
+    }
+    
+    .subscribe-right input[type=email]{
+        width: 35vw;
+    }
+    
+    .subscribe-right button{
+        width: 80%;
+        font-size: 3vw;
+    }
+
+    .more{
+        height: auto;
+        padding: 5vh 5vw;
+        display: grid;
+        grid-template-columns: repeat(2 , 1fr);
+        row-gap: 4vh;
+    }
+    
+    .card{
+        width: 100%;
+    }
+    
+    .logoandabout{
+        height: auto;
+        gap: 4vh;
+    }
+    
+    .more-logo{
+        height: 10vh;
+        width: 40vw;
+        position: relative;
+        left: -7vw;
+    }
+    
+    .more-heading{
+        margin-bottom: 1.5vh;
+    }
+    
+    .more ul li{
+        font-size: 4vw;
+    }
+    
+    .more-heading a{
+        font-size: 5vw;
+    }
+    
+    .follow-icon a i{
+        font-size: 4vw;
+        margin-right: 5vw;
+    }
+}
+
