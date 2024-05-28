@@ -1,3 +1,3 @@
 # Laundry project
 
-Upskill Mafia task no 20
+This is a Laundry booking project where user can book the services provided by the laundry.
